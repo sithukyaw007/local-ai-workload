@@ -7,6 +7,9 @@ Detailed architecture and operations guide:
 - OFFLINE_HYBRID_VERIFICATION.md
 - CLAUDE_CODE_LOCAL_SETUP_PLAN.md
 
+Contributing guide:
+- CONTRIBUTING.md
+
 ## Architecture
 
 - Ollama for convenience model hosting.
