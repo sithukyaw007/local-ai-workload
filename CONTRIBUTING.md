@@ -49,6 +49,16 @@ cp .env.example .env
 - [ ] `./scripts/healthcheck.sh` passes locally.
 - [ ] No secrets are introduced (`.env`, logs, local settings remain untracked).
 - [ ] README or docs updated when behavior changes.
+- [ ] `CHANGELOG.md` updated for user-visible changes.
+
+## Good First Contributions
+
+Good starter areas include:
+
+- Documentation clarity and troubleshooting improvements.
+- Script safety checks and error messages.
+- Benchmark reporting consistency.
+- Small reliability fixes in startup and health checks.
 
 ## Security and Secrets
 

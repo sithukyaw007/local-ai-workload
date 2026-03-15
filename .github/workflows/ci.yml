@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  shell-and-docs-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install shellcheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Validate shell scripts syntax
+        run: |
+          set -euo pipefail
+          find scripts llama-cpp-brew/scripts -type f -name "*.sh" -print0 | xargs -0 -n1 bash -n
+
+      - name: Lint shell scripts
+        run: |
+          set -euo pipefail
+          find scripts llama-cpp-brew/scripts -type f -name "*.sh" -print0 | xargs -0 shellcheck -S error
+
+      - name: Validate key docs exist
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test -f CONTRIBUTING.md
+          test -f LICENSE
+          test -f CODE_OF_CONDUCT.md
+          test -f SECURITY.md
+          test -f CHANGELOG.md
+          test -f SUPPORT.md
+          test -f MAINTAINERS.md
+
+      - name: Ensure env template is tracked
+        run: |
+          set -euo pipefail
+          test -f .env.example

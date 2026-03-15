@@ -1,14 +1,34 @@
 # Local AI Workload (Docker First)
 
+[![CI](https://github.com/sithukyaw007/local-ai-workload/actions/workflows/ci.yml/badge.svg)](https://github.com/sithukyaw007/local-ai-workload/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This folder provides an end-to-end control plane for local AI development and design workflows on macOS with Docker Desktop as primary runtime.
 
-Detailed architecture and operations guide:
-- SOLUTION_ARCHITECTURE.md
-- OFFLINE_HYBRID_VERIFICATION.md
-- CLAUDE_CODE_LOCAL_SETUP_PLAN.md
+## Vision
+
+Make local-first AI workflows reliable, reproducible, and contributor-friendly for software and design work.
+
+## Documentation Index
+
+- [SOLUTION_ARCHITECTURE.md](SOLUTION_ARCHITECTURE.md)
+- [OFFLINE_HYBRID_VERIFICATION.md](OFFLINE_HYBRID_VERIFICATION.md)
+- [CLAUDE_CODE_LOCAL_SETUP_PLAN.md](CLAUDE_CODE_LOCAL_SETUP_PLAN.md)
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
+- [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md)
+- [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
+- [docs/BENCHMARKS.md](docs/BENCHMARKS.md)
+- [docs/RESPONSIBLE_USE.md](docs/RESPONSIBLE_USE.md)
+- [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md)
+- [ROADMAP.md](ROADMAP.md)
+- [CHANGELOG.md](CHANGELOG.md)
 
 Contributing guide:
-- CONTRIBUTING.md
+- [CONTRIBUTING.md](CONTRIBUTING.md)
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- [SECURITY.md](SECURITY.md)
+- [SUPPORT.md](SUPPORT.md)
+- [MAINTAINERS.md](MAINTAINERS.md)
 
 Questions and support:
 - GitHub Discussions: https://github.com/sithukyaw007/local-ai-workload/discussions
@@ -33,6 +53,8 @@ Questions and support:
 
 ## Quick Start
 
+This path is optimized to get a first working local response quickly.
+
 1. Copy env file.
 2. Run bootstrap.
 3. Pull Ollama models.
@@ -41,7 +63,6 @@ Questions and support:
 6. Run benchmark.
 
 ```bash
-cd /Users/sithukyaw/work/local-ai-workload
 cp .env.example .env
 ./scripts/bootstrap.sh
 ./scripts/pull-models.sh
@@ -87,6 +108,27 @@ For a 64 GB machine with 24 GB reserved for non-AI workloads:
 - Keep total active AI memory near 32-36 GB.
 - Run one heavy quality model at a time.
 - Keep default context around 8k-16k and increase only when needed.
+
+## Limitations
+
+- Current primary support target is macOS Apple Silicon.
+- Quality and latency vary significantly by model size and quantization.
+- Some advanced or cloud-only features require hybrid mode and explicit credentials.
+
+## Reproducible Benchmarks
+
+- Inputs: [benchmarks](benchmarks)
+- Methodology: [docs/BENCHMARKS.md](docs/BENCHMARKS.md)
+- Run: `./scripts/benchmark.sh`
+
+## Troubleshooting
+
+Start with [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md), then run:
+
+```bash
+./scripts/healthcheck.sh
+./scripts/verify-modes.sh
+```
 
 ## Claude Code Integration
 
