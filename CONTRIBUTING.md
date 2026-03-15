@@ -59,3 +59,9 @@ cp .env.example .env
 ## Reporting Issues
 
 Please use the issue templates in `.github/ISSUE_TEMPLATE` and include exact repro steps and environment details.
+
+## Questions and Support
+
+For setup help, usage questions, or architecture discussion, use GitHub Discussions:
+
+- https://github.com/sithukyaw007/local-ai-workload/discussions

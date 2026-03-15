@@ -10,6 +10,9 @@ Detailed architecture and operations guide:
 Contributing guide:
 - CONTRIBUTING.md
 
+Questions and support:
+- GitHub Discussions: https://github.com/sithukyaw007/local-ai-workload/discussions
+
 ## Architecture
 
 - Ollama for convenience model hosting.
