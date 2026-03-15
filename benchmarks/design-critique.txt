@@ -1,0 +1,15 @@
+Design critique task:
+
+We are building a task management app for distributed engineering teams.
+Current concept:
+- Single page dashboard
+- Dense table with all tasks
+- 12 status labels
+- Filtering hidden behind a settings modal
+- No explicit onboarding flow
+
+Return:
+1. Top UX problems
+2. Information architecture changes
+3. Revised interaction model
+4. 2 A/B test ideas

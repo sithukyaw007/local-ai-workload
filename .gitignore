@@ -1,0 +1,4 @@
+.env
+logs/
+*.pid
+.claude/settings.local.json

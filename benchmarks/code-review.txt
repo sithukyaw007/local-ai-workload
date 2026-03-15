@@ -1,0 +1,13 @@
+Review this pseudo diff for correctness and edge cases.
+
+- Added caching for user profile reads keyed by user_id.
+- Cache TTL is 6 hours.
+- Cache is not invalidated after profile update.
+- Fallback on cache miss is database read.
+- New endpoint supports batch profile update.
+
+Return:
+1. High severity findings
+2. Medium severity findings
+3. Proposed fix strategy
+4. Test cases
