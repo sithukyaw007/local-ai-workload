@@ -1,0 +1,47 @@
+title: "[Q&A] "
+labels:
+  - question
+category: Q&A
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask setup or usage questions here. Include enough context so others can help quickly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: What are you trying to do?
+      placeholder: I am trying to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Environment and context
+      description: Share versions and runtime details.
+      placeholder: |
+        - macOS:
+        - Chip:
+        - Docker:
+        - ollama:
+        - llama.cpp:
+        - claude:
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What you already tried
+      description: Commands, docs, or approaches already attempted.
+      placeholder: |
+        1. Ran ...
+        2. Checked ...
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant command output
+      description: Paste only the most relevant logs.
+      render: shell

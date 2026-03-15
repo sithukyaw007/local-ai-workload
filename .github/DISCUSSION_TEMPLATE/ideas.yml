@@ -1,0 +1,40 @@
+title: "[Idea] "
+labels:
+  - enhancement
+category: Ideas
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share proposals for improving local-ai-workload.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What gap do you want to address?
+      placeholder: The current workflow...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Describe what should change.
+      placeholder: We could...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Trade-offs
+      description: Risks, complexity, or compatibility concerns.
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: How to validate
+      description: What would prove the idea works?
+      placeholder: Success means...

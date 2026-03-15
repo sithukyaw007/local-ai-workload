@@ -12,6 +12,7 @@ Contributing guide:
 
 Questions and support:
 - GitHub Discussions: https://github.com/sithukyaw007/local-ai-workload/discussions
+- Discussion templates: Q&A, Ideas, Show and tell
 
 ## Architecture
 

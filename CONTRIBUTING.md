@@ -65,3 +65,9 @@ Please use the issue templates in `.github/ISSUE_TEMPLATE` and include exact rep
 For setup help, usage questions, or architecture discussion, use GitHub Discussions:
 
 - https://github.com/sithukyaw007/local-ai-workload/discussions
+
+Discussion templates are available for:
+
+- Q&A
+- Ideas
+- Show and tell

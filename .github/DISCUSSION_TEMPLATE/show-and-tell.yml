@@ -1,0 +1,42 @@
+title: "[Show and Tell] "
+labels:
+  - showcase
+category: Show and tell
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share your setup, benchmark results, or workflow improvements.
+
+  - type: input
+    id: headline
+    attributes:
+      label: What are you sharing?
+      placeholder: My M4 Max offline coding setup
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Explain your setup, commands, and outcomes.
+      placeholder: |
+        Hardware:
+        Models:
+        Key commands:
+        Results:
+    validations:
+      required: true
+
+  - type: textarea
+    id: lessons
+    attributes:
+      label: Lessons learned
+      description: What worked well and what did not?
+
+  - type: textarea
+    id: assets
+    attributes:
+      label: Links or screenshots
+      description: Optional supporting assets.
