@@ -101,6 +101,29 @@ Check health:
 ./scripts/healthcheck.sh
 ```
 
+## Server Logging
+
+The MLX server logs to `logs/mlx-server.log`. Control verbosity via `MLX_LOG_LEVEL` in `.env`:
+
+```bash
+# DEBUG (default) — full request/response payloads, token-by-token model output
+MLX_LOG_LEVEL=DEBUG
+
+# INFO — prompt processing progress, KV cache stats, HTTP status only (less disk usage)
+MLX_LOG_LEVEL=INFO
+```
+
+Stream logs in real time:
+
+```bash
+tail -f logs/mlx-server.log
+```
+
+| Level | What's Logged | Use When |
+|-------|---------------|----------|
+| **DEBUG** | Request payloads, each generated token, full response JSON | Debugging, development |
+| **INFO** | Prompt progress, KV cache, HTTP status | Normal operation |
+
 ## Notes on RAM Budget
 
 For a 64 GB machine with 24 GB reserved for non-AI workloads:
