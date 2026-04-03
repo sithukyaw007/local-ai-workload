@@ -25,9 +25,9 @@ model_list:
 
 router_settings:
   routing_strategy: usage-based-routing
-  allowed_fails: 2
-  cooldown_time: 15
-  enable_pre_call_checks: true
+  allowed_fails: 5
+  cooldown_time: 10
+  enable_pre_call_checks: false
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
