@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "apiKeyHelper": "/Users/sithukyaw/work/local-ai-workload/scripts/claude-api-key-helper.sh",
+  "model": "local-coder-quality",
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:4000",
+    "ANTHROPIC_MODEL": "local-coder-quality"
+  }
+}

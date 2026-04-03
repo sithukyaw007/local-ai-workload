@@ -1,21 +1,21 @@
 model_list:
   - model_name: local-coder-fast
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
-      api_base: http://host.docker.internal:8000/v1
-      api_key: dummy
+      model: ollama_chat/qwen3.5:35b
+      api_base: http://host.docker.internal:11434
+      think: false
 
   - model_name: local-coder-quality
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
-      api_base: http://host.docker.internal:8000/v1
-      api_key: dummy
+      model: ollama_chat/qwen3.5:35b
+      api_base: http://host.docker.internal:11434
+      think: false
 
   - model_name: local-general
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
-      api_base: http://host.docker.internal:8000/v1
-      api_key: dummy
+      model: ollama_chat/qwen3.5:35b
+      api_base: http://host.docker.internal:11434
+      think: false
 
   - model_name: cloud-fallback
     litellm_params:
@@ -37,4 +37,3 @@ general_settings:
 litellm_settings:
   default_internal_model: local-coder-quality
   drop_params: true
-  callbacks: ["mlx_patch._proxy_patch"]

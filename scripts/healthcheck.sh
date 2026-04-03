@@ -25,13 +25,9 @@ check() {
 }
 
 echo "[health] Running endpoint checks"
-check "Ollama" "http://localhost:${OLLAMA_PORT:-11434}/api/tags"
+check "MLX server" "http://localhost:${MLX_SERVER_PORT:-8000}/v1/models"
 
-if [[ ( -n "${LLAMA_MODEL_PATH:-}" && -f "${LLAMA_MODEL_PATH}" ) || -n "${LLAMA_HF_REPO:-}" ]]; then
-  check "llama.cpp" "http://localhost:${LLAMA_SERVER_PORT:-8080}/health"
-else
-  echo "[skip] llama.cpp health check (set valid LLAMA_MODEL_PATH or LLAMA_HF_REPO to enable)"
-fi
+check "MLX server" "http://localhost:${MLX_SERVER_PORT:-8000}/v1/models"
 
 check "Gateway live" "http://localhost:${GATEWAY_PORT:-4000}/health/liveliness"
 
