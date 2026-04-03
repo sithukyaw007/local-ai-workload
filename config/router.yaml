@@ -32,6 +32,17 @@ model_list:
       api_key: os.environ/CLOUD_API_KEY
       api_base: os.environ/CLOUD_API_BASE
 
+  # Catch-all: route any unrecognized model (e.g., claude-haiku-4-5-20251001
+  # used by Claude Code sub-agents) to the local MLX backend
+  - model_name: "*"
+    litellm_params:
+      model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
+      api_base: http://host.docker.internal:8000/v1
+      api_key: dummy
+      extra_body:
+        chat_template_kwargs:
+          enable_thinking: false
+
 router_settings:
   routing_strategy: usage-based-routing
   allowed_fails: 5
