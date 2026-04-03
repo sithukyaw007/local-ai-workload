@@ -1,19 +1,19 @@
 model_list:
   - model_name: local-coder-fast
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
+      model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
 
   - model_name: local-coder-quality
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
+      model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
 
   - model_name: local-general
     litellm_params:
-      model: openai/mlx-community/Qwen3.5-35B-A3B-4bit
+      model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
 
