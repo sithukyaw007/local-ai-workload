@@ -4,18 +4,27 @@ model_list:
       model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
+      extra_body:
+        chat_template_kwargs:
+          enable_thinking: false
 
   - model_name: local-coder-quality
     litellm_params:
       model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
+      extra_body:
+        chat_template_kwargs:
+          enable_thinking: false
 
   - model_name: local-general
     litellm_params:
       model: hosted_vllm/mlx-community/Qwen3.5-35B-A3B-4bit
       api_base: http://host.docker.internal:8000/v1
       api_key: dummy
+      extra_body:
+        chat_template_kwargs:
+          enable_thinking: false
 
   - model_name: cloud-fallback
     litellm_params:
