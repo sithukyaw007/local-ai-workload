@@ -47,7 +47,6 @@ fi
 MLX_PORT="${MLX_SERVER_PORT:-8000}"
 MLX_PATH="${MLX_SERVER_PATH:-/Users/sithukyaw/work/local-mac-ai}"
 MLX_MODEL_ID="${MLX_MODEL:-mlx-community/Qwen3.5-35B-A3B-4bit}"
-MLX_LOG_LEVEL="${MLX_LOG_LEVEL:-INFO}"
 
 if [[ -f "$MLX_PID_FILE" ]] && ps -p "$(cat "$MLX_PID_FILE")" >/dev/null 2>&1; then
   echo "[start] mlx_lm.server already running with PID $(cat "$MLX_PID_FILE")"
@@ -58,13 +57,14 @@ else
     exit 1
   fi
 
-  echo "[start] Launching mlx_lm.server on port $MLX_PORT (log-level: $MLX_LOG_LEVEL)"
+  echo "[start] Launching mlx_lm.server on port $MLX_PORT (DEBUG logging)"
   echo "  Model: $MLX_MODEL_ID"
   echo "  Logs:  $LOG_DIR/mlx-server.log"
+  echo "  Stream: tail -f $LOG_DIR/mlx-server.log"
   nohup "$MLX_PATH/.venv/bin/python" -m mlx_lm server \
     --model "$MLX_MODEL_ID" \
     --port "$MLX_PORT" \
-    --log-level "$MLX_LOG_LEVEL" \
+    --log-level DEBUG \
     > "$LOG_DIR/mlx-server.log" 2>&1 &
   echo $! > "$MLX_PID_FILE"
 
